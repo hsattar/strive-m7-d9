@@ -8,7 +8,6 @@ import Details from './components/Details'
 
 function App() {
   return (
-    <div>
       <BrowserRouter>
         <MyNavbar brand='Strivestaurant' />
         <Routes>
@@ -20,7 +19,6 @@ function App() {
           <Route path='*' element={<NotFound />} />
         </Routes>
       </BrowserRouter>
-    </div>
   )
 }
 
