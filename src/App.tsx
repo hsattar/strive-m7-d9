@@ -9,7 +9,7 @@ import Details from './components/Details'
 function App() {
   return (
       <BrowserRouter>
-        <MyNavbar brand='Strivestaurant' />
+        <MyNavbar title='Strivestaurant' />
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/profile' element={<h1>PROFILE PAGE</h1>} />

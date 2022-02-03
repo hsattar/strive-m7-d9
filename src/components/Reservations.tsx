@@ -3,9 +3,10 @@ import ListGroup from 'react-bootstrap/ListGroup'
 import Spinner from 'react-bootstrap/Spinner'
 import Alert from 'react-bootstrap/Alert'
 import { parseISO, format } from 'date-fns'
+import { IReservation } from '../types/Reservation'
 
 const Reservations = () => {
-  const [reservations, setReservations] = useState([])
+  const [reservations, setReservations] = useState<IReservation[]>([])
   const [isLoading, setIsLoading] = useState(true)
   const [isError, setIsError] = useState(false)
 
@@ -20,7 +21,7 @@ const Reservations = () => {
       )
 
       if (response.ok) {
-        let data = await response.json()
+        let data: IReservation[] = await response.json()
         setReservations(data)
         setIsLoading(false)
       } else {
